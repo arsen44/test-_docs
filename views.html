@@ -1,0 +1,216 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ru" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Views &mdash; документация test 0.0.1</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=ba58aea8"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/translations.js?v=cd1d70c9"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="prev" title="test documentation" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            test
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Поиск в документации" aria-label="Поиск в документации" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Меню навигации">
+              <p class="caption" role="heading"><span class="caption-text">Contents:Views</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Views</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#ticker.views.CryptoPairViewSet"><code class="docutils literal notranslate"><span class="pre">CryptoPairViewSet</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ticker.views.CryptoPairViewSet.filter_backends"><code class="docutils literal notranslate"><span class="pre">CryptoPairViewSet.filter_backends</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ticker.views.CryptoPairViewSet.queryset"><code class="docutils literal notranslate"><span class="pre">CryptoPairViewSet.queryset</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ticker.views.CryptoPairViewSet.search_fields"><code class="docutils literal notranslate"><span class="pre">CryptoPairViewSet.search_fields</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ticker.views.CryptoPairViewSet.serializer_class"><code class="docutils literal notranslate"><span class="pre">CryptoPairViewSet.serializer_class</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ticker.views.PriceUpdateViewSet"><code class="docutils literal notranslate"><span class="pre">PriceUpdateViewSet</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ticker.views.PriceUpdateViewSet.filter_backends"><code class="docutils literal notranslate"><span class="pre">PriceUpdateViewSet.filter_backends</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ticker.views.PriceUpdateViewSet.filterset_fields"><code class="docutils literal notranslate"><span class="pre">PriceUpdateViewSet.filterset_fields</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ticker.views.PriceUpdateViewSet.history"><code class="docutils literal notranslate"><span class="pre">PriceUpdateViewSet.history()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ticker.views.PriceUpdateViewSet.latest"><code class="docutils literal notranslate"><span class="pre">PriceUpdateViewSet.latest()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ticker.views.PriceUpdateViewSet.ordering"><code class="docutils literal notranslate"><span class="pre">PriceUpdateViewSet.ordering</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ticker.views.PriceUpdateViewSet.ordering_fields"><code class="docutils literal notranslate"><span class="pre">PriceUpdateViewSet.ordering_fields</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ticker.views.PriceUpdateViewSet.queryset"><code class="docutils literal notranslate"><span class="pre">PriceUpdateViewSet.queryset</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ticker.views.PriceUpdateViewSet.serializer_class"><code class="docutils literal notranslate"><span class="pre">PriceUpdateViewSet.serializer_class</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Меню навигации для мобильных устройств" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">test</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Навигация по страницам">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Views</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/views.rst.txt" rel="nofollow"> Просмотреть исходный код страницы</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-ticker.views">
+<span id="views"></span><h1>Views<a class="headerlink" href="#module-ticker.views" title="Ссылка на этот заголовок"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="ticker.views.CryptoPairViewSet">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ticker.views.</span></span><span class="sig-name descname"><span class="pre">CryptoPairViewSet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ticker.views.CryptoPairViewSet" title="Ссылка на это определение"></a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="ticker.views.CryptoPairViewSet.filter_backends">
+<span class="sig-name descname"><span class="pre">filter_backends</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;class</span> <span class="pre">'rest_framework.filters.SearchFilter'&gt;]</span></em><a class="headerlink" href="#ticker.views.CryptoPairViewSet.filter_backends" title="Ссылка на это определение"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ticker.views.CryptoPairViewSet.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">QuerySet</span></em><a class="headerlink" href="#ticker.views.CryptoPairViewSet.queryset" title="Ссылка на это определение"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ticker.views.CryptoPairViewSet.search_fields">
+<span class="sig-name descname"><span class="pre">search_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['symbol']</span></em><a class="headerlink" href="#ticker.views.CryptoPairViewSet.search_fields" title="Ссылка на это определение"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ticker.views.CryptoPairViewSet.serializer_class">
+<span class="sig-name descname"><span class="pre">serializer_class</span></span><a class="headerlink" href="#ticker.views.CryptoPairViewSet.serializer_class" title="Ссылка на это определение"></a></dt>
+<dd><p>псевдоним для <code class="xref py py-class docutils literal notranslate"><span class="pre">CryptoPairSerializer</span></code></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ticker.views.PriceUpdateViewSet">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ticker.views.</span></span><span class="sig-name descname"><span class="pre">PriceUpdateViewSet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ticker.views.PriceUpdateViewSet" title="Ссылка на это определение"></a></dt>
+<dd><p>Decorator for views that checks that the user is logged in and is a staff
+member, displaying the login page if necessary.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ticker.views.PriceUpdateViewSet.filter_backends">
+<span class="sig-name descname"><span class="pre">filter_backends</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;class</span> <span class="pre">'django_filters.rest_framework.backends.DjangoFilterBackend'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'rest_framework.filters.OrderingFilter'&gt;]</span></em><a class="headerlink" href="#ticker.views.PriceUpdateViewSet.filter_backends" title="Ссылка на это определение"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ticker.views.PriceUpdateViewSet.filterset_fields">
+<span class="sig-name descname"><span class="pre">filterset_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['pair__symbol']</span></em><a class="headerlink" href="#ticker.views.PriceUpdateViewSet.filterset_fields" title="Ссылка на это определение"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ticker.views.PriceUpdateViewSet.history">
+<span class="sig-name descname"><span class="pre">history</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ticker.views.PriceUpdateViewSet.history" title="Ссылка на это определение"></a></dt>
+<dd><p>Get price history for a specific pair and time range</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ticker.views.PriceUpdateViewSet.latest">
+<span class="sig-name descname"><span class="pre">latest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ticker.views.PriceUpdateViewSet.latest" title="Ссылка на это определение"></a></dt>
+<dd><p>Get latest prices for all pairs</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ticker.views.PriceUpdateViewSet.ordering">
+<span class="sig-name descname"><span class="pre">ordering</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['-timestamp']</span></em><a class="headerlink" href="#ticker.views.PriceUpdateViewSet.ordering" title="Ссылка на это определение"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ticker.views.PriceUpdateViewSet.ordering_fields">
+<span class="sig-name descname"><span class="pre">ordering_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['timestamp',</span> <span class="pre">'price']</span></em><a class="headerlink" href="#ticker.views.PriceUpdateViewSet.ordering_fields" title="Ссылка на это определение"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ticker.views.PriceUpdateViewSet.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">QuerySet</span></em><a class="headerlink" href="#ticker.views.PriceUpdateViewSet.queryset" title="Ссылка на это определение"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ticker.views.PriceUpdateViewSet.serializer_class">
+<span class="sig-name descname"><span class="pre">serializer_class</span></span><a class="headerlink" href="#ticker.views.PriceUpdateViewSet.serializer_class" title="Ссылка на это определение"></a></dt>
+<dd><p>псевдоним для <code class="xref py py-class docutils literal notranslate"><span class="pre">PriceUpdateSerializer</span></code></p>
+</dd></dl>
+
+</dd></dl>
+
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">function</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Пример кода&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Нижняя область">
+        <a href="index.html" class="btn btn-neutral float-left" title="test documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Предыдущая</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Авторские права 2025, Arsen S.. </p>
+  </div>
+
+  Собрано при помощи <a href="https://www.sphinx-doc.org/">Sphinx</a> с использованием
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">темы,</a>
+    предоставленной <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+ 
+<script type="text/javascript">
+    <!-- Adds target=_blank to external links -->
+    $(document).ready(function () {
+        $('a[href^="http://"], a[href^="https://"]').not('a[class*=internal]').attr('target', '_blank');
+    });
+</script>
+
+
+</body>
+</html>

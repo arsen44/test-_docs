@@ -1,0 +1,11 @@
+Views
+=====
+
+.. automodule:: ticker.views
+   :members:
+   :undoc-members:
+
+.. code:: python
+
+   def function():
+       print("Пример кода")
